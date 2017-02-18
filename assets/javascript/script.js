@@ -1,13 +1,13 @@
 // Firebase key
-var config = {
-    apiKey: "AIzaSyCMGK8qN1TGVpEb0L9nejCO6UCQHXNqC30",
-    authDomain: "happy-medium-solo.firebaseapp.com",
-    databaseURL: "https://happy-medium-solo.firebaseio.com",
-    storageBucket: "happy-medium-solo.appspot.com",
-    messagingSenderId: "431309963912"
-  };
-firebase.initializeApp(config);             // Initialization
-var database = firebase.database();
+// var config = {
+//     apiKey: "AIzaSyCMGK8qN1TGVpEb0L9nejCO6UCQHXNqC30",
+//     authDomain: "happy-medium-solo.firebaseapp.com",
+//     databaseURL: "https://happy-medium-solo.firebaseio.com",
+//     storageBucket: "happy-medium-solo.appspot.com",
+//     messagingSenderId: "431309963912"
+//   };
+// firebase.initializeApp(config);             // Initialization
+var database = firebase.database().ref();
 
 $('.g-signin2').trigger();                  // Google Sign In button trigger
 var profile = '';                           // Gets the user info from Google
