@@ -1,11 +1,11 @@
 // Firebase key
 var config = {
-    apiKey: "AIzaSyArprwD6qM4Z6qf8LkXaO-qBTwCwiVJSz8",
-    authDomain: "happy-medium-152501.firebaseapp.com",
-    databaseURL: "https://happy-medium-152501.firebaseio.com",
-    storageBucket: "happy-medium-152501.appspot.com",
-    messagingSenderId: "37679856259"
-};
+    apiKey: "AIzaSyCMGK8qN1TGVpEb0L9nejCO6UCQHXNqC30",
+    authDomain: "happy-medium-solo.firebaseapp.com",
+    databaseURL: "https://happy-medium-solo.firebaseio.com",
+    storageBucket: "happy-medium-solo.appspot.com",
+    messagingSenderId: "431309963912"
+  };
 firebase.initializeApp(config);             // Initialization
 var database = firebase.database();
 
