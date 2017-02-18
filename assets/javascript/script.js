@@ -7,7 +7,7 @@
 //     messagingSenderId: "431309963912"
 //   };
 // firebase.initializeApp(config);             // Initialization
-var database = firebase.database().ref();
+var database = firebase.database();
 
 $('.g-signin2').trigger();                  // Google Sign In button trigger
 var profile = '';                           // Gets the user info from Google
@@ -37,6 +37,9 @@ function onSignIn(googleUser) {
     profile = googleUser.getBasicProfile();
     name = profile.getName();
     email = profile.getEmail();
+    var provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('profile');
+    provider.addScope("email");
 
     $('.g-signin2').hide();                 // hide Google button after Logged
     $('#hello').html("Hello <strong>" + name + "</strong>, start or join a room to begin."); // Add welcome user name after Logged
