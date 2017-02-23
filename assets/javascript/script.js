@@ -1,12 +1,14 @@
 // Firebase key
-// var config = {
-//     apiKey: "AIzaSyCMGK8qN1TGVpEb0L9nejCO6UCQHXNqC30",
-//     authDomain: "happy-medium-solo.firebaseapp.com",
-//     databaseURL: "https://happy-medium-solo.firebaseio.com",
-//     storageBucket: "happy-medium-solo.appspot.com",
-//     messagingSenderId: "431309963912"
-//   };
-// firebase.initializeApp(config);             // Initialization
+var config = {
+  apiKey: "AIzaSyCMGK8qN1TGVpEb0L9nejCO6UCQHXNqC30",
+  authDomain: "happy-medium-solo.firebaseapp.com",
+  databaseURL: "https://happy-medium-solo.firebaseio.com",
+  storageBucket: "happy-medium-solo.appspot.com",
+  messagingSenderId: "431309963912"
+};
+
+firebase.initializeApp(config);
+
 var database = firebase.database();
 
 $('.g-signin2').trigger();                  // Google Sign In button trigger
@@ -31,6 +33,7 @@ var avgLng = 0;                             // Avarage long
 var directionsService;                      // Used for Google Directions
 var directionsDisplay;                      // Used for Google Directions
 var interval = 0;                           // Used to keep updating marker for the first 10 seconds
+
 
 // Google Sign In
 function onSignIn(googleUser) {
@@ -409,14 +412,14 @@ function initiate_join(name,date,reference) {
         count_users++;
     });
 
+
     $(document).ready(function() {
 
         // Map initialization
         function myMap1() {
-            var infoWindowOptions = {
-                // content: 'BC Testing!'
-            };
-            var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+
+            var infoWindow = new google.maps.InfoWindow();
+
 
             // Get user location
             navigator.geolocation.getCurrentPosition(function(position) {
@@ -457,4 +460,6 @@ function initiate_join(name,date,reference) {
             }
         }, 2000);
     }); // end of document ready
+
+
 }
